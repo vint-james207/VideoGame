@@ -43,14 +43,14 @@ public class Main {
         vg.players = Integer.valueOf(scanner.nextLine());
         System.out.println("Enter year released");
         vg.released = Integer.valueOf(scanner.nextLine());
-        saveGame(vg);
+        saveGame(vg, "gfile.json");
     }
 
 
     //write file
-    public static void saveGame(VideoGame vg) {
+    public static void saveGame(VideoGame vg, String fileName) {
         JsonSerializer serializer = new JsonSerializer();
-        File gameFile = new File("gfile.json");
+        File gameFile = new File(fileName);
         String json = serializer.serialize(vg);
         try {
             FileWriter fw = new FileWriter(gameFile);
