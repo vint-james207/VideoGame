@@ -15,11 +15,11 @@ public class MainTest {
 
         VideoGame testVideoGame = Main.loadGame("test.json");
 
-        assertTrue(testgame.name.equals(testVideoGame));
-        assertTrue(testgame.genre.equals(testVideoGame));
-        assertTrue(testgame.company.equals(testVideoGame));
-        assertTrue(testgame.system.equals(testVideoGame));
-        assertTrue(testgame == (testVideoGame));
-        assertTrue(testgame == (testVideoGame));
+        assertTrue(testgame.name.equals(testVideoGame.getName()));
+        assertTrue(testgame.genre.equals(testVideoGame.getGenre()));
+        assertTrue(testgame.company.equals(testVideoGame.getCompany()));
+        assertTrue(testgame.system.equals(testVideoGame.getSystem()));
+        assertTrue(testgame.getPlayers() == (testVideoGame.getPlayers()));
+        assertTrue(testgame.getReleased() == (testVideoGame.getReleased()));
     }
 }
